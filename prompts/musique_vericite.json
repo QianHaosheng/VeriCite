@@ -1,0 +1,213 @@
+{
+    "evidence_check_instruction": "Instruction: Please refer to the information in the following passage to answer the question. You need to first determine whether the information in the passage is helpful for answering the question. If you believe the passage is helpful, output 'Yes'; otherwise, output 'No'. Do not output any additional content.",
+    "evidence_check_demo_sep": "\n\n",
+    "evidence_check_demo_prompt": "{INST}\nQuestion: {Q}\nPassage: {D}\nResponse: {A}",
+    "evidence_check_demos": [
+        {
+            "question": "Were Scott Derrickson and Ed Wood of the same nationality?",
+            "answer": "No",
+            "docs": [
+                {
+                    "text": "Adam Collis is an American filmmaker and actor. He attended the Duke University from 1986 to 1990 and the University of California, Los Angeles from 2007 to 2010. He also studied cinema at the University of Southern California from 1991 to 1997. Collis first work was the assistant director for the Scott Derrickson's short \"Love in the Ruins\" (1995). In 1998, he played \"Crankshaft\" in Eric Koyanagi's \"Hundred Percent\"."
+                }
+            ]
+        },
+        {
+            "question": "What government position was held by the woman who portrayed Corliss Archer in the film Kiss and Tell?",
+            "answer": "Yes",
+            "docs": [
+                {
+                    "text": "Shirley Temple Black (April 23, 1928 \u2013 February 10, 2014) was an American actress, singer, dancer, businesswoman, and diplomat who was Hollywood's number one box-office draw as a child actress from 1935 to 1938. As an adult, she was named United States ambassador to Ghana and to Czechoslovakia and also served as Chief of Protocol of the United States."
+                }
+            ]
+        }
+    ],
+    "evidence_answer_instruction": "Instruction: Please refer to the information in the following passage to answer the question. When answering, ignore any irrelevant information from the passage, but retain all relevant details to provide a comprehensive and accurate response.",
+    "evidence_answer_demo_sep": "\n\n",
+    "evidence_answer_demo_prompt": "{INST}\nQuestion: {Q}\nPassage: {D}\nResponse: {A}",
+    "evidence_answer_demos": [
+        {
+            "question": "What government position was held by the woman who portrayed Corliss Archer in the film Kiss and Tell?",
+            "answer": "The woman who portrayed Corliss Archer in the film Kiss and Tell was Shirley Temple Black. She held the government positions of United States ambassador to Ghana, United States ambassador to Czechoslovakia, and Chief of Protocol of the United States.",
+            "docs": [
+                {
+                    "text": "Shirley Temple Black (April 23, 1928 \u2013 February 10, 2014) was an American actress, singer, dancer, businesswoman, and diplomat who was Hollywood's number one box-office draw as a child actress from 1935 to 1938. As an adult, she was named United States ambassador to Ghana and to Czechoslovakia and also served as Chief of Protocol of the United States."
+                }
+            ]
+        },
+        {
+            "question": "Were Scott Derrickson and Ed Wood of the same nationality?",
+            "answer": "Ed Wood was an American filmmaker. To answer this question, we also need to know what Scott Derrickson's nationality is.",
+            "docs": [
+                {
+                    "text": "Edward Davis Wood Jr. (October 10, 1924 \u2013 December 10, 1978) was an American filmmaker, actor, writer, producer, and director."
+                }
+            ]
+        }
+    ],
+
+    "initial_answer_instruction": "Instruction: Please refer to the information in the following passages to answer the question. When answering, ignore any irrelevant information from the passages, but retain all relevant details to provide a comprehensive and accurate response. Always cite for any factual claim. When citing several search results, use [1][2][3]. Cite at least one passage in each sentence.",
+    "initial_answer_demo_sep": "\n\n",
+    "initial_answer_demo_prompt": "{INST}\nQuestion: {Q}\n{D}\nAnswer: {A}",
+    "initial_answer_doc_prompt": "Document [{ID}](Title: {T}): {P}\n",
+    "initial_answer_demos": [
+        {
+            "question": "What government position was held by the woman who portrayed Corliss Archer in the film Kiss and Tell?",
+            "answer": "The woman who portrayed Corliss Archer in the film Kiss and Tell was Shirley Temple [5]. Shirley Temple Black, as she was later known, held several government positions, including United States ambassador to Ghana, United States ambassador to Czechoslovakia, and Chief of Protocol of the United States [1].",
+            "docs": [
+                {
+                    "title": "Shirley Temple",
+                    "text": "Shirley Temple Black (April 23, 1928 \u2013 February 10, 2014) was an American actress, singer, dancer, businesswoman, and diplomat who was Hollywood's number one box-office draw as a child actress from 1935 to 1938. As an adult, she was named United States ambassador to Ghana and to Czechoslovakia and also served as Chief of Protocol of the United States."
+                },
+                {
+                    "title": "Village accountant",
+                    "text": "The Village Accountant (variously known as \"Patwari\", \"Talati\", \"Patel\", \"Karnam\", \"Adhikari\", \"Shanbogaru\",\"Patnaik\" etc.) is an administrative government position found in rural parts of the Indian sub-continent. The office and the officeholder are called the \"patwari\" in Telangana, Bengal, North India and in Pakistan while in Sindh it is called \"tapedar\". The position is known as the \"karnam\" in Andhra Pradesh, \"patnaik\" in Orissa or \"adhikari\" in Tamil Nadu, while it is commonly known as the \"talati\" in Karnataka, Gujarat and Maharashtra. The position was known as the \"kulkarni\" in Northern Karnataka and Maharashtra. The position was known as the \"shanbogaru\" in South Karnataka."
+                },
+                {
+                    "title": "Secretary of State for Constitutional Affairs",
+                    "text": "The office of Secretary of State for Constitutional Affairs was a British Government position, created in 2003. Certain functions of the Lord Chancellor which related to the Lord Chancellor's Department were transferred to the Secretary of State. At a later date further functions were also transferred to the Secretary of State for Constitutional Affairs from the First Secretary of State, a position within the government held by the Deputy Prime Minister."
+                },
+                {
+                    "title": "Janet Waldo",
+                    "text": "Janet Marie Waldo (February 4, 1920 \u2013 June 12, 2016) was an American radio and voice actress. She is best known in animation for voicing Judy Jetson, Nancy in \"Shazzan\", Penelope Pitstop, and Josie in \"Josie and the Pussycats\", and on radio as the title character in \"Meet Corliss Archer\"."
+                },
+                {
+                    "title": "Kiss and Tell (1945 film)",
+                    "text": "Kiss and Tell is a 1945 American comedy film starring then 17-year-old Shirley Temple as Corliss Archer. In the film, two teenage girls cause their respective parents much concern when they start to become interested in boys. The parents' bickering about which girl is the worse influence causes more problems than it solves."
+                }
+            ]
+        },
+        {
+            "question": "Were Scott Derrickson and Ed Wood of the same nationality?",
+            "answer": "Yes, Scott Derrickson and Ed Wood were of the same nationality [2][3]. Ed Wood was an American filmmaker [2]. Similarly, Scott Derrickson is also American [3].",
+            "docs": [
+                {
+                    "title": "Woodson, Arkansas",
+                    "text": "Woodson is a census-designated place (CDP) in Pulaski County, Arkansas, in the United States. Its population was 403 at the 2010 census. It is part of the Little Rock\u2013North Little Rock\u2013Conway Metropolitan Statistical Area. Woodson and its accompanying Woodson Lake and Wood Hollow are the namesake for Ed Wood Sr., a prominent plantation owner, trader, and businessman at the turn of the 20th century. Woodson is adjacent to the Wood Plantation, the largest of the plantations own by Ed Wood Sr."
+                },
+                {
+                    "title": "Ed Wood",
+                    "text": "Edward Davis Wood Jr. (October 10, 1924 \u2013 December 10, 1978) was an American filmmaker, actor, writer, producer, and director."
+                },
+                {
+                    "title": "Scott Derrickson",
+                    "text": "Scott Derrickson (born July 16, 1966) is an American director, screenwriter and producer. He lives in Los Angeles, California. He is best known for directing horror films such as \"Sinister\", \"The Exorcism of Emily Rose\", and \"Deliver Us From Evil\", as well as the 2016 Marvel Cinematic Universe installment, \"Doctor Strange.\""
+                },
+                {
+                    "title": "Tyler Bates",
+                    "text": "Tyler Bates (born June 5, 1965) is an American musician, music producer, and composer for films, television, and video games. Much of his work is in the action and horror film genres, with films like \"Dawn of the Dead, 300, Sucker Punch,\" and \"John Wick.\" He has collaborated with directors like Zack Snyder, Rob Zombie, Neil Marshall, William Friedkin, Scott Derrickson, and James Gunn. With Gunn, he has scored every one of the director's films; including \"Guardians of the Galaxy\", which became one of the highest grossing domestic movies of 2014, and its 2017 sequel. In addition, he is also the lead guitarist of the American rock band Marilyn Manson, and produced its albums \"The Pale Emperor\" and \"Heaven Upside Down\"."
+                },
+                {
+                    "title": "Sinister (film)",
+                    "text": "Sinister is a 2012 supernatural horror film directed by Scott Derrickson and written by Derrickson and C. Robert Cargill. It stars Ethan Hawke as fictional true-crime writer Ellison Oswalt who discovers a box of home movies in his attic that puts his family in danger."
+                }
+            ]
+        }
+    ],
+
+    "summary_instruction": "Instruction: Please answer the following question. I will provide you with some answer statements with citations, as well as their original references. You need to summarize these statements and merge their citations such as [1][2].",
+    "summary_demo_sep": "\n\n",
+    "summary_demo_prompt": "{INST}\nQuestion: {Q}\nReferences: {D}\nAnswer statements:\n {S}\nYour Answer: {A}",
+    "summary_doc_prompt": "Document [{ID}](Title: {T}): {P}\n",
+    "summary_demos": [
+        {
+            "question": "What government position was held by the woman who portrayed Corliss Archer in the film Kiss and Tell?",
+            "docs": [
+                {
+                    "title": "Shirley Temple",
+                    "text": "Shirley Temple Black (April 23, 1928 \u2013 February 10, 2014) was an American actress, singer, dancer, businesswoman, and diplomat who was Hollywood's number one box-office draw as a child actress from 1935 to 1938. As an adult, she was named United States ambassador to Ghana and to Czechoslovakia and also served as Chief of Protocol of the United States."
+                },
+                {
+                    "title": "Village accountant",
+                    "text": "The Village Accountant (variously known as \"Patwari\", \"Talati\", \"Patel\", \"Karnam\", \"Adhikari\", \"Shanbogaru\",\"Patnaik\" etc.) is an administrative government position found in rural parts of the Indian sub-continent. The office and the officeholder are called the \"patwari\" in Telangana, Bengal, North India and in Pakistan while in Sindh it is called \"tapedar\". The position is known as the \"karnam\" in Andhra Pradesh, \"patnaik\" in Orissa or \"adhikari\" in Tamil Nadu, while it is commonly known as the \"talati\" in Karnataka, Gujarat and Maharashtra. The position was known as the \"kulkarni\" in Northern Karnataka and Maharashtra. The position was known as the \"shanbogaru\" in South Karnataka."
+                },
+                {
+                    "title": "Secretary of State for Constitutional Affairs",
+                    "text": "The office of Secretary of State for Constitutional Affairs was a British Government position, created in 2003. Certain functions of the Lord Chancellor which related to the Lord Chancellor's Department were transferred to the Secretary of State. At a later date further functions were also transferred to the Secretary of State for Constitutional Affairs from the First Secretary of State, a position within the government held by the Deputy Prime Minister."
+                },
+                {
+                    "title": "Janet Waldo",
+                    "text": "Janet Marie Waldo (February 4, 1920 \u2013 June 12, 2016) was an American radio and voice actress. She is best known in animation for voicing Judy Jetson, Nancy in \"Shazzan\", Penelope Pitstop, and Josie in \"Josie and the Pussycats\", and on radio as the title character in \"Meet Corliss Archer\"."
+                },
+                {
+                    "title": "Kiss and Tell (1945 film)",
+                    "text": "Kiss and Tell is a 1945 American comedy film starring then 17-year-old Shirley Temple as Corliss Archer. In the film, two teenage girls cause their respective parents much concern when they start to become interested in boys. The parents' bickering about which girl is the worse influence causes more problems than it solves."
+                }
+            ],
+            "answer_statements": [
+                {
+                    "statement": "The woman who portrayed Corliss Archer in the film Kiss and Tell was Shirley Temple Black.",
+                    "doc_id": [
+                        0
+                    ]
+                },
+                {
+                    "statement": "She held the government positions of United States ambassador to Ghana, United States ambassador to Czechoslovakia, and Chief of Protocol of the United States.",
+                    "doc_id": [
+                        0
+                    ]
+                },
+                {
+                    "statement": "The woman who portrayed Corliss Archer in the film Kiss and Tell was Shirley Temple.",
+                    "doc_id": [
+                        4
+                    ]
+                },
+                {
+                    "statement": "Shirley Temple Black, as she was later known, held several government positions, including United States ambassador to Ghana, United States ambassador to Czechoslovakia, and Chief of Protocol of the United States.",
+                    "doc_id": [
+                        0
+                    ]
+                }
+            ],
+            "answer": "The woman who portrayed Corliss Archer in the film Kiss and Tell was Shirley Temple [5]. Shirley Temple Black, as she was later known, held several government positions, including United States ambassador to Ghana, United States ambassador to Czechoslovakia, and Chief of Protocol of the United States [1]."
+        },
+        {
+            "question": "Were Scott Derrickson and Ed Wood of the same nationality?",
+            "docs": [
+                {
+                    "title": "Woodson, Arkansas",
+                    "text": "Woodson is a census-designated place (CDP) in Pulaski County, Arkansas, in the United States. Its population was 403 at the 2010 census. It is part of the Little Rock\u2013North Little Rock\u2013Conway Metropolitan Statistical Area. Woodson and its accompanying Woodson Lake and Wood Hollow are the namesake for Ed Wood Sr., a prominent plantation owner, trader, and businessman at the turn of the 20th century. Woodson is adjacent to the Wood Plantation, the largest of the plantations own by Ed Wood Sr."
+                },
+                {
+                    "title": "Ed Wood",
+                    "text": "Edward Davis Wood Jr. (October 10, 1924 \u2013 December 10, 1978) was an American filmmaker, actor, writer, producer, and director."
+                },
+                {
+                    "title": "Scott Derrickson",
+                    "text": "Scott Derrickson (born July 16, 1966) is an American director, screenwriter and producer. He lives in Los Angeles, California. He is best known for directing horror films such as \"Sinister\", \"The Exorcism of Emily Rose\", and \"Deliver Us From Evil\", as well as the 2016 Marvel Cinematic Universe installment, \"Doctor Strange.\""
+                },
+                {
+                    "title": "Tyler Bates",
+                    "text": "Tyler Bates (born June 5, 1965) is an American musician, music producer, and composer for films, television, and video games. Much of his work is in the action and horror film genres, with films like \"Dawn of the Dead, 300, Sucker Punch,\" and \"John Wick.\" He has collaborated with directors like Zack Snyder, Rob Zombie, Neil Marshall, William Friedkin, Scott Derrickson, and James Gunn. With Gunn, he has scored every one of the director's films; including \"Guardians of the Galaxy\", which became one of the highest grossing domestic movies of 2014, and its 2017 sequel. In addition, he is also the lead guitarist of the American rock band Marilyn Manson, and produced its albums \"The Pale Emperor\" and \"Heaven Upside Down\"."
+                },
+                {
+                    "title": "Sinister (film)",
+                    "text": "Sinister is a 2012 supernatural horror film directed by Scott Derrickson and written by Derrickson and C. Robert Cargill. It stars Ethan Hawke as fictional true-crime writer Ellison Oswalt who discovers a box of home movies in his attic that puts his family in danger."
+                }
+            ],
+            "answer_statements": [
+                {
+                    "statement": "Edward Davis Wood Jr. (October 10, 1924 \u2013 December 10, 1978) was an American filmmaker, actor, writer, producer, and director.",
+                    "doc_id": [
+                        1
+                    ]
+                },
+                {
+                    "statement": "Scott Derrickson (born July 16, 1966) is an American director, screenwriter and producer.",
+                    "doc_id": [
+                        2
+                    ]
+                },
+                {
+                    "statement": "Scott Derrickson and Ed Wood were of the same nationality",
+                    "doc_id": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "answer": "Yes, Scott Derrickson and Ed Wood were of the same nationality [2][3]. Ed Wood was an American filmmaker [2]. Similarly, Scott Derrickson is also American [3]."
+        }
+    ]
+}
